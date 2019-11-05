@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Pixabay Search (Express Version) </title>
+    </head>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <body>
+
+        <h1> Pixabay Search Results </h1>
+        <hr>
+        
+        <form action="/results">
+            
+            Keyword: <input type="text" name="keyword">
+            Orientation : 
+            <select name ="or">
+                <option>Vertical</option>
+                <option>Horizontal</option>
+            </select>
+            <button> Search! </button>
+            
+        </form> <br>
+        
+       <br>
+        
+        <div id="imgBox">
+                
+               <span id="likes1"><img src='<%= images.hits[0].webformatURL %>' id="img1" class="rounded border border-dark"><span id="textArea1"> Likes: <%= images.hits[0].likes %> </span></span>
+                 &emsp;
+                <span id="likes2"><img src='<%= images.hits[1].webformatURL %>' id="img2" class="rounded border border-dark"><span id="textArea2">Likes: <%= images.hits[1].likes %> </span></span>
+                &emsp;
+                <span id="likes3"><img src='<%= images.hits[2].webformatURL %>' id="img3" class="rounded border border-dark"><span id="textArea3">Likes: <%= images.hits[2].likes %> </span></span>
+                &emsp;
+                <span id="likes4"><img src='<%= images.hits[3].webformatURL %>' id="img4" class="rounded border border-dark"><span id="textArea4">Likes: <%= images.hits[3].likes %> </span></span>
+            </div> 
+      
+
+    </body>
+</html>
